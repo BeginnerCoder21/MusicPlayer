@@ -7,8 +7,9 @@ var forward=document.getElementById("nextb");
 var backward=document.getElementById("backb");
 var Pause=document.getElementById("pauseb");
 
-let playImg = "play.png";
-let pauseImg = "pause.png";
+
+let playImg = "./Images/play.png";
+let pauseImg = "./Images/pause.png";
 
 playPause.src = playImg;
 let isPlaying = true;
@@ -22,7 +23,7 @@ const songList = [
     {
         name: "Kabira",
         source: "./Songs/Kabira.mp3",
-        cover: "./Images/kabira.jpg"
+        cover: "./Images/Kabira.jpg"
     },
     {
         name: "Kaise Mujhe Tum",
@@ -42,7 +43,7 @@ const songList = [
     {
         name: "Cham Cham",
         source: "./Songs/Cham_Cham.mp3",
-        cover: "./Images/cham.jpg"
+        cover: "./Images/Cham.jpg"
     },
     {
         name: "Agar Tum Saath Ho",
@@ -64,7 +65,7 @@ const songList = [
 // creating track list
 const ul = createEle('ul')
 let songIndex = 0;
-// preloaded song
+//songs
 loadMusic(songList[songIndex]);
 function loadMusic() {
     coverArt.src = songList[songIndex].cover;
@@ -72,6 +73,7 @@ function loadMusic() {
 }
 function playSong() {
     playPause.src = pauseImg;
+    //playPause.classList.toggle("fa-pause");
     audio.play();
 }
 function pauseSong() {
@@ -96,7 +98,6 @@ function backPlay() {
 }
 function playHandler() {
     isPlaying = !isPlaying;
-    //console.log("Change: ",isPlaying)
     isPlaying ? pauseSong() : playSong();
 }
 playPause.addEventListener("click", playHandler);
