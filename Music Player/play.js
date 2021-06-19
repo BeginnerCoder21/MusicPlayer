@@ -42,7 +42,7 @@ const songList = [
     {
         name: "Cham Cham",
         source: "./Songs/Cham_Cham.mp3",
-        cover: "./Images/Cham.jpg"
+        cover: "./Images/cham.jpg"
     },
     {
         name: "Agar Tum Saath Ho",
