@@ -22,7 +22,7 @@ const songList = [
     {
         name: "Kabira",
         source: "./Songs/Kabira.mp3",
-        cover: "./Images/Kabira.jpg"
+        cover: "./Images/kabira.jpg"
     },
     {
         name: "Kaise Mujhe Tum",
