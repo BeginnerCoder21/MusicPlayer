@@ -1,6 +1,7 @@
 A Responsive Bollywood Music Player
 <br>
 Made with HTML+CSS+JavaScript(JS)
+<br><br>
 Try it using this <a href="https://wonderful-bassi-294565.netlify.app/music%20player/">Link</a>
 <br><br>
 <h2>Webpage View &#128071;</h2>
