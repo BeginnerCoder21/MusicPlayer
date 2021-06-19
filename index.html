@@ -8,6 +8,7 @@
     height: 100%;
     background-color: #FFDB7D;
   }
+  @media screen and (min-width: 600px) {
   .container{
     margin: 0;
     padding: 0;
@@ -37,12 +38,12 @@
   }
   .music-box{
     position: absolute;
-width: 613px;
-height: 246px;
-left: 88px;
-top: 188px;
-border-radius: 36px;
-background: #FFFFFF;
+    width: 613px;
+    height: 246px;
+    left: 88px;
+    top: 188px;
+    border-radius: 36px;
+    background: #FFFFFF;
   }
   .music-box #cover{
     width: 613px;
@@ -50,17 +51,17 @@ background: #FFFFFF;
     border-radius: 36px;
   }
   .player{
-  position: absolute;
-  width: 613px;
-  height: 103px;
-  left: 88px;
-  top: 490px;
-  background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
-  backdrop-filter: blur( 11.5px );
-  -webkit-backdrop-filter: blur( 11.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+width: 613px;
+height: 103px;
+left: 88px;
+top: 490px;
+background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+backdrop-filter: blur( 11.5px );
+-webkit-backdrop-filter: blur( 11.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   .playlist-box{
     position: absolute;
@@ -164,35 +165,68 @@ top: 32px;
   margin-left: 10px;
   font-family: Raleway;
 }
+}
 #pauseb{
   visibility: hidden;
 }
-@media only screen and (max-width: 360px) {
+
+@media screen and (max-width: 600px) {
 /* For mobile phones: */
-.head{
+.container{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.head i{
   position: absolute;
-  width: 463px;
-  height: 125px;
-  left: 39px;
-  top: 9px;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  color: #000000;
-  }
+  width: 72px;
+  height: 68px;
+  float: left;
+  left: 25px;
+  top: 40px;
+  font-size: 25px;
+}
+.head h1{
+  position: absolute;
+width: 463px;
+height: 125px;
+left: 59px;
+top: 27px;
+
+font-family: Acme;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 23px;
+
+color: #000000;
+}
+.music-box{
+  position: absolute;
+width: 278px;
+height: 160px;
+left: 41px;
+top: 89px;
+
+background: #FFFFFF;
+border-radius: 20px;
+}
+.music-box #cover{
+  width: 278px;
+  height: 160px;
+  border-radius: 20px;
+}
 }
 </style>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Raleway:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
   </head>
   <body>
     <div class="container">
