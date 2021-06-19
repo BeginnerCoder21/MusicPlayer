@@ -91,6 +91,10 @@ background: #0A7E00;
   font-size: 30px;
   color: white;
 }
+.play img{
+  height: 45px;
+  width: 45px;
+}
 .next button{
   position: absolute;
 width: 75px;
@@ -165,9 +169,6 @@ top: 32px;
   margin-left: 10px;
   font-family: Raleway;
 }
-}
-#pauseb{
-  visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -354,8 +355,8 @@ left: 20px;
       <div class="player">
         <audio id="audio" src=""></audio>
         <section class="play">
-          <button type="button" name="button" id="playb"><i class="fa fa-play"></i></button>
-          <button type="button" name="button" id="pauseb"><i class="fa fa-pause"></i></button>
+          <button type="button" name="button" id="toggleb"><img src="" id="playb"></button>
+
         </section>
         <section class="previous">
           <button type="button" name="button" id="backb"><i class="fa fa-step-backward"></i></button>
@@ -379,6 +380,7 @@ left: 20px;
           </ul>
         </div>
       </div>
+
     </div>
     <script type="text/javascript" src="play.js" >
     </script>
