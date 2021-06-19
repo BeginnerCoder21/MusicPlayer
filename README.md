@@ -1,4 +1,3 @@
-# Music Player
 A Responsive Bollywood Music Player
 <br>
 Made with HTML+CSS+JavaScript(JS)
