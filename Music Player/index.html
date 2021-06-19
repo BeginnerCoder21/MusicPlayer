@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<style media="screen">
+  html{
+    margin: 0;
+  }
+  body{
+    margin: 0;
+    height: 100%;
+    background-color: #FFDB7D;
+  }
+  @media screen and (min-width: 600px) {
+  .container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .head i{
+    position: absolute;
+    width: 72px;
+    height: 68px;
+    float: left;
+    left: 88px;
+    top: 45px;
+    font-size: 48px;
+  }
+  .head h1{
+    position: absolute;
+    width: 600px;
+    height: 125px;
+    left: 150px;
+    float: left;
+    top: 10px;
+    font-family: Acme;
+    font-weight: bold;
+    font-size: 48px;
+    color: #000000;
+  }
+  .music-box{
+    position: absolute;
+    width: 613px;
+    height: 246px;
+    left: 88px;
+    top: 188px;
+    border-radius: 36px;
+    background: #FFFFFF;
+  }
+  .music-box #cover{
+    width: 613px;
+    height: 246px;
+    border-radius: 36px;
+  }
+  .player{
+    position: absolute;
+width: 613px;
+height: 103px;
+left: 88px;
+top: 490px;
+background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+backdrop-filter: blur( 11.5px );
+-webkit-backdrop-filter: blur( 11.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .playlist-box{
+    position: absolute;
+width: 370px;
+height: 654px;
+left: 990px;
+top: 0px;
+background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+backdrop-filter: blur( 11.5px );
+-webkit-backdrop-filter: blur( 11.5px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+.play button{
+  position: absolute;
+width: 75px;
+height: 75px;
+border-radius: 50%;
+top: 15px;
+left: 260px;
+background: #0A7E00;
+}
+.play i{
+  top: 60px;
+  float: left;
+  padding-left: 20px;
+  font-size: 30px;
+  color: white;
+}
+.next button{
+  position: absolute;
+width: 75px;
+height: 75px;
+top: 15px;
+left: 470px;
+border-radius: 50%;
+background-color: white;
+}
+.next i{
+  top: 60px;
+  float: left;
+  padding-left: 20px;
+  font-size: 30px;
+  color: black;
+}
+.previous button{
+  position: absolute;
+width: 75px;
+height: 75px;
+top: 15px;
+left: 50px;
+border-radius: 50%;
+background-color: white;
+}
+.previous i{
+  top: 60px;
+  float: left;
+  padding-left: 20px;
+  font-size: 30px;
+  color: black;
+}
+.playlist-box h1{
+  position: absolute;
+height: 125px;
+top: 25px;
+left: 40px;
+font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+line-height: 41px;
+
+color: #000000;
+}
+.song-box{
+  position: absolute;
+width: 312px;
+margin-top: 80px;
+left: 30px;
+height: 543px;
+top: 32px;
+}
+.song-box ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.song-box li{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  margin-top: 40px;
+  font-family: Raleway;
+}
+.song-box a{
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+  color: black;
+  margin-left: 10px;
+  font-family: Raleway;
+}
+}
+#pauseb{
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+/* For mobile phones: */
+.container{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.head i{
+  position: absolute;
+  width: 72px;
+  height: 68px;
+  float: left;
+  left: 25px;
+  top: 40px;
+  font-size: 30px;
+}
+.head h1{
+  position: absolute;
+width: 463px;
+height: 125px;
+left: 59px;
+top: 30px;
+
+font-family: Acme;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 23px;
+
+color: #000000;
+}
+.music-box{
+  position: absolute;
+width: 278px;
+height: 180px;
+left: 50px;
+top: 120px;
+background: #FFFFFF;
+border-radius: 20px;
+}
+.music-box #cover{
+  width: 278px;
+  height: 180px;
+  background-position: left;
+  border-radius: 20px;
+}
+.player{
+position: absolute;
+width: 289px;
+height: 62px;
+left: 41px;
+top: 309px;
+background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+backdrop-filter: blur( 11.5px );
+-webkit-backdrop-filter: blur( 11.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.play button{
+  position: absolute;
+width: 43px;
+height: 43px;
+left: 124px;
+top: 10px;
+border-radius: 50%;
+background: #0A7E00;
+}
+.play i{
+  top: 60px;
+  padding-left: 8.5px;
+  font-size: 20px;
+  color: white;
+}
+.next button{
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  left: 210px;
+  top: 10px;
+border-radius: 50%;
+background-color: white;
+}
+.next i{
+  top: 60px;
+  float: left;
+  padding-left: 10px;
+  font-size: 20px;
+  color: black;
+}
+.previous button{
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  left: 30px;
+  top: 10px;
+border-radius: 50%;
+background-color: white;
+}
+.previous i{
+  top: 60px;
+  float: left;
+  padding-left: 10px;
+  font-size: 20px;
+  color: black;
+}
+.playlist-box{
+  position: absolute;
+width: 289px;
+height: 222px;
+left: 41px;
+top: 400px;
+background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+backdrop-filter: blur( 11.5px );
+-webkit-backdrop-filter: blur( 11.5px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.playlist-box h1{
+  position: absolute;
+width: 463px;
+height: 125px;
+left: 30px;
+top: 10px;
+font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 23px;
+
+color: #000000;
+
+}
+.song-box{
+  position: absolute;
+width: 252px;
+height: 170px;
+overflow-y: auto;
+top: 40px;
+left: 20px;
+}
+.song-box ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.song-box li{
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  margin-top: 15px;
+  font-family: Raleway;
+}
+.song-box a{
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 20px;
+  color: black;
+  margin-left: 10px;
+  font-family: Raleway;
+}
+}
+</style>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <i class="fa fa-music"></i>
+        <h1>Music Player</h1>
+      </div>
+      <div class="music-box"><img id="cover" src="" class="fluid-img"></div>
+      <div class="player">
+        <audio id="audio" src=""></audio>
+        <section class="play">
+          <button type="button" name="button" id="playb"><i class="fa fa-play"></i></button>
+          <button type="button" name="button" id="pauseb"><i class="fa fa-pause"></i></button>
+        </section>
+        <section class="previous">
+          <button type="button" name="button" id="backb"><i class="fa fa-step-backward"></i></button>
+        </section>
+        <section class="next">
+          <button type="button" name="button" id="nextb"><i class="fa fa-step-forward"></i></button>
+        </section>
+      </div>
+      <div class="playlist-box">
+        <h1>Playlist</h1>
+        <div class="song-box">
+          <ul>
+            <li id="s1"> <a>Sun Saathiya</a> </li>
+            <li id="s2"> <a>Kabira</a> </li>
+            <li id="s3"> <a>Kaise Mujhe Tum</a> </li>
+            <li id="s4"> <a>Galliyan</a> </li>
+            <li id="s5"> <a>Behti Hawa Sa Tha Wo</a> </li>
+            <li id="s6"> <a>Cham Cham</a> </li>
+            <li id="s7"> <a>Agar Tum Saath Ho</a> </li>
+            <li id="s8"> <a>Aankh Marey</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="play.js" >
+    </script>
+  </body>
+</html>
