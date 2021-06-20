@@ -23,7 +23,7 @@ const songList = [
     {
         name: "Kabira",
         source: "./Songs/Kabira.mp3",
-        cover: "./Images/Kabira.jpg"
+        cover: "./Images/kabira.jpg"
     },
     {
         name: "Kaise Mujhe Tum",
@@ -43,7 +43,7 @@ const songList = [
     {
         name: "Cham Cham",
         source: "./Songs/Cham_Cham.mp3",
-        cover: "./Images/Cham.jpg"
+        cover: "./Images/cham.jpg"
     },
     {
         name: "Agar Tum Saath Ho",
